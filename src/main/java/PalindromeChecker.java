@@ -35,14 +35,21 @@ public void tester()
     }
   }
 }
+public String onlyLetters(String sString){
+  String word = "";
+  for(int i = 0; i < sString.length(); i++){
+    if(Character.isLetter(sString.charAt(i))){
+      word+= sString.substring(i, i+1);
+    }
+  }
+  return word;
+}
 public boolean palindrome(String sWord)
 {
   String word = "";
   for(int i = sWord.length(); i > 0; i--){
     word+= sWord.substring(i-1, i);
   }
-  noSpaces(sWord);
-  noSpaces(word);
   onlyLetters(sWord);
   onlyLetters(word);
   return sWord.equals(word);
@@ -52,25 +59,6 @@ public String reverse(String sWord)
   String word = "";
   for(int i = sWord.length(); i > 0; i--){
     word+= sWord.substring(i-1, i);
-  }
-  return word;
-}
-public String noSpaces(String sWord){
-  String word = "";
-  for(int i = 0; i < sWord.length(); i++){
-    if(sWord.substring(i, i+1).equals(" ")){
-    } else{
-      word+=sWord.substring(i, i+1);
-    }
-  }
-  return word;
-}
-public String onlyLetters(String sString){
-  String word = "";
-  for(int i = 0; i < sString.length(); i++){
-    if(Character.isLetter(sString.charAt(i))){
-      word+= sString.substring(i, i+1);
-    }
   }
   return word;
 }
