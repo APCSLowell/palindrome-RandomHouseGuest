@@ -46,12 +46,11 @@ public String onlyLetters(String sString){
 }
 public boolean palindrome(String sWord)
 {
+  onlyLetters(sWord);
   String word = "";
   for(int i = sWord.length(); i > 0; i--){
     word+= sWord.substring(i-1, i);
   }
-  onlyLetters(sWord);
-  onlyLetters(word);
   return sWord.equals(word);
 }
 public String reverse(String sWord)
