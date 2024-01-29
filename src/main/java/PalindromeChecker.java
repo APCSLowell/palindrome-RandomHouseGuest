@@ -35,15 +35,20 @@ public void tester()
     }
   }
 }
-public boolean palindrome(String word)
+public boolean palindrome(String sWord)
 {
-  //your code here
-  return false;
+  String word = "";
+  for(int i = sWord.length(); i > 0; i--){
+    word+= sWord.substring(i-1, i);
+  }
+  return sWord.equals(word);
 }
-public String reverse(String str)
+public String reverse(String sWord)
 {
-    String sNew = new String();
-    //your code here
-    return sNew;
+  String word = "";
+  for(int i = sWord.length(); i > 0; i--){
+    word+= sWord.substring(i-1, i);
+  }
+  return word;
 }
 }
