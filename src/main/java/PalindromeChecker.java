@@ -46,12 +46,12 @@ public String onlyLetters(String sString){
 }
 public boolean palindrome(String sWord)
 {
-  String words = onlyLetters(sWord);
+  String words = noCapitals(onlyLetters(sWord));
   String word = "";
   for(int i = sWord.length(); i > 0; i--){
     word+= sWord.substring(i-1, i);
   }
-  return words.equals(onlyLetters(word));
+  return words.equals(noCapitals(onlyLetters(word)));
 }
 public String reverse(String sWord)
 {
@@ -60,5 +60,8 @@ public String reverse(String sWord)
     word+= sWord.substring(i-1, i);
   }
   return word;
+}
+public String noCapitals(String sWord){
+  return sWord.toLowerCase();
 }
 }
